@@ -1,12 +1,14 @@
 import { Controller, Get, Post, } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+// default route will be home here
+@Controller('home')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  // localhost:3000/home
   @Get()
-  getHello(): string {
+    getHello(): string {
     return this.appService.getHello();
   }
 

@@ -11,3 +11,5 @@
   ## Things Implemented
   - Basic CRUD operation with static data
   - Understanding validation with DTOS ( using class validators )
+  - How to use and apply middleware
+  - Hosted APP -> https://nest-ts.herokuapp.com/

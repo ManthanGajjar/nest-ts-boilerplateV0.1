@@ -1,7 +1,7 @@
-import { Controller, Post, Get, Body, Param, Delete, } from '@nestjs/common';
+import { Controller, Post, Get, Body, Param, Delete, UsePipes, ValidationPipe, } from '@nestjs/common';
 import { UserService } from './user.service';
 import { User } from './interfaces/user';
-
+import { AddUserDto } from './dto/user.dto';
 // default route will be user
 @Controller('user')
 export class UserController {
@@ -20,7 +20,8 @@ export class UserController {
   }
 
   @Post()
-  async addUser(@Body() user: any ) {
+  @UsePipes(new ValidationPipe())
+  async addUser(@Body() user: AddUserDto ) {
     return await this.userService.addUsers(user);
   }
 

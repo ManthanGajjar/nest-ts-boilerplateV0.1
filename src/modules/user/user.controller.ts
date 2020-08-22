@@ -1,5 +1,5 @@
 import { UserService } from './user.services';
-import { AddUser } from './dto/userDTO';
+import { AddUser } from './dto/userDTO.dto';
 import { Controller, Get, Param, Post, UseFilters, ValidationPipe, UsePipes, Body, Delete } from "@nestjs/common";
 
 @Controller('user')
